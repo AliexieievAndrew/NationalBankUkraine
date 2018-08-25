@@ -1,10 +1,13 @@
 package comw.example.user;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,36 +19,17 @@ import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView currenciesView;
-    List<CurrencyData> currencies;
+    CardView cardCurrency;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        currencies = new ArrayList<>();
-
-        currenciesView = (RecyclerView) findViewById(R.id.currenciesView);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        currenciesView.setLayoutManager(layoutManager);
-
-        CurrencyAdapter adapter = new CurrencyAdapter(currencies);
-        currenciesView.setAdapter(adapter);
-
-        App.getApi().getCurrencyToday("https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?date=20180824&json").
-                enqueue(new Callback<List<CurrencyData>>() {
-            @Override
-            public void onResponse(Call<List<CurrencyData>> call, Response<List<CurrencyData>> response) {
-
-                currencies.addAll(response.body());
-                currenciesView.getAdapter().notifyDataSetChanged();
-            }
-
-            @Override
-            public void onFailure(Call<List<CurrencyData>> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "An error occurred during networking", Toast.LENGTH_SHORT).show();
-            }
-        });
+        cardCurrency = (CardView) findViewById(R.id.cardCurrency);
+    }
+    public void onClick(View view) {
+        Intent intent = new Intent(this, CurrencyActivity.class);
+        startActivity(intent);
     }
 }
