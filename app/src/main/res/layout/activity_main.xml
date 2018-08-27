@@ -9,6 +9,7 @@
     android:orientation="vertical"
     android:padding="10dp"
     android:background="@color/backgroundColor">
+
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"

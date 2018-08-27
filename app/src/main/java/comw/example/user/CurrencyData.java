@@ -60,4 +60,5 @@ public class CurrencyData {
     public void setExchangedate(String exchangedate) {
         this.exchangedate = exchangedate;
     }
+
 }
