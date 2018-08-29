@@ -3,6 +3,8 @@ package comw.example.user;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Objects;
+
 public class CurrencyData {
     @SerializedName("r030")
     @Expose
@@ -37,6 +39,7 @@ public class CurrencyData {
         this.txt = txt;
     }
 
+    // currency rate
     public Double getRate() {
         return rate;
     }
@@ -45,6 +48,7 @@ public class CurrencyData {
         this.rate = rate;
     }
 
+    // short currency name
     public String getCc() {
         return cc;
     }
