@@ -1,4 +1,4 @@
-package comw.example.user;
+package comw.example.user.Currency;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

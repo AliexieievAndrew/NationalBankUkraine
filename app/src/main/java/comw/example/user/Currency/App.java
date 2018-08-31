@@ -1,4 +1,4 @@
-package comw.example.user;
+package comw.example.user.Currency;
 
 import android.app.Application;
 

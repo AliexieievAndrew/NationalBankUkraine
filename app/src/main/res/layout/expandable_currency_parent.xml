@@ -17,7 +17,7 @@
         <TextView
             android:text="USD"
             android:textSize="20dp"
-            android:id="@+id/currencyName1"
+            android:id="@+id/currencyNameShort"
             android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_width="0dp"
@@ -25,7 +25,7 @@
         <TextView
             android:text="27,3333"
             android:textSize="20dp"
-            android:id="@+id/currencyRate1"
+            android:id="@+id/currencyValue"
             android:padding="10dp"
             android:layout_height="wrap_content"
             android:layout_width="0dp"
@@ -47,6 +47,7 @@
                 android:layout_height="match_parent" />
         </LinearLayout>
         <ImageView
+            android:id="@+id/imgDelete"
             android:padding="10dp"
             android:layout_gravity="center"
             android:background="@drawable/ic_delete_black_24dp"

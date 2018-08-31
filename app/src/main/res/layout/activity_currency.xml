@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CurrencyActivity">
+    tools:context=".Currency.CurrencyActivity">
     <LinearLayout
         android:layout_below="@+id/currenciesView"
         android:layout_width="match_parent"
@@ -44,7 +44,5 @@
         android:id="@+id/currenciesView"
         android:layout_alignParentStart="true">
     </android.support.v7.widget.RecyclerView>
-
-
 
 </RelativeLayout>

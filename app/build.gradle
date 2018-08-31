@@ -37,4 +37,6 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:27.0.2'
 
     compile 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
+    compile 'com.bignerdranch.android:expandablerecyclerview:1.0.3'
 }
